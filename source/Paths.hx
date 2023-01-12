@@ -435,8 +435,7 @@ class Paths
 		return modFolders('images/' + key + '.txt');
 	}
 
-	Goes unused for now
-
+	
 	inline static public function modsShaderFragment(key:String, ?library:String)
 	{
 		return modFolders('shaders/'+key+'.frag');
