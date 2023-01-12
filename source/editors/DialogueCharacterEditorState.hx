@@ -643,6 +643,15 @@ class DialogueCharacterEditorState extends MusicBeatState
 					}
 				}
 				#end
+					
+				if(moved) {
+					offsetLoopText.text = 'Loop: ' + animShit.loop_offsets;
+					offsetIdleText.text = 'Idle: ' + animShit.idle_offsets;
+					ghostLoop.offset.set(animShit.loop_offsets[0], animShit.loop_offsets[1]);
+					ghostIdle.offset.set(animShit.idle_offsets[0], animShit.idle_offsets[1]);
+				}
+			}
+	
 
 			if (FlxG.keys.pressed.Q && camGame.zoom > 0.1) {
 				camGame.zoom -= elapsed * camGame.zoom;
