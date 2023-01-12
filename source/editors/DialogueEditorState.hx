@@ -182,7 +182,9 @@ class DialogueEditorState extends MusicBeatState
 		tab_group.add(speedStepper);
 		tab_group.add(soundInputText);
 		tab_group.add(lineInputText);
+		#if !android
 		tab_group.add(loadButton);
+		#end
 		tab_group.add(saveButton);
 		UI_box.addGroup(tab_group);
 	}
