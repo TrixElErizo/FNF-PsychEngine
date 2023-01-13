@@ -90,7 +90,7 @@ class Main extends Sprite
 		ClientPrefs.loadDefaultKeys();
 		addChild(new FlxGame(game.width, game.height, game.initialState, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
 
-		#if (android && desktop)
+		#if (android || desktop)
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
 		Lib.current.stage.align = "tl";
@@ -150,7 +150,7 @@ class Main extends Sprite
 		if (!FileSystem.exists(SUtil.getStorageDirectory() + "./crash/"))
 			FileSystem.createDirectory(SUtil.getStorageDirectory() + "./crash/");
 
-		SUtil.saveContent(path, errMsg + "\n");
+		File.saveContent(path, errMsg + "\n");
 
 		Sys.println(errMsg);
 		Sys.println("Crash dump saved in " + Path.normalize(path));
