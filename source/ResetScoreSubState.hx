@@ -68,6 +68,12 @@ class ResetScoreSubState extends MusicBeatSubstate
 		noText.screenCenter(X);
 		noText.x += 200;
 		add(noText);
+		
+		#if android
+		addVirtualPad(LEFT_RIGHT, A_B);
+		addPadCamera();
+		#end
+		
 		updateOptions();
 	}
 
