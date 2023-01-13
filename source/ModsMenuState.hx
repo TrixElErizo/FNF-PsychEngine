@@ -462,7 +462,7 @@ class ModsMenuState extends MusicBeatState
 		}
 
 		var path:String = SUtil.getStorageDirectory() + 'modsList.txt';
-		File.saveContent(SUtil.getStorageDirectory() + path, fileStr);
+		File.saveContent(path, fileStr);
 		Paths.pushGlobalMods();
 	}
 
