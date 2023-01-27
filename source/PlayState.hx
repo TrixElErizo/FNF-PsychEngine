@@ -1438,7 +1438,7 @@ class PlayState extends MusicBeatState
 		
 		for (folder in foldersToCheck)
 		{
-			if(FileSystem.exists(folder))
+			if(FileSystem.exists(SUtil.getStorageDirectory() + folder))
 			{
 				var frag:String = folder + name + '.frag';
 				var vert:String = folder + name + '.vert';
