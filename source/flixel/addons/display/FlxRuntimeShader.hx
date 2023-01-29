@@ -125,9 +125,9 @@ class FlxRuntimeShader extends FlxShader
 			colorMultiplier[3][3] = 1.0; // openfl_ColorMultiplierv.w;
 			color = clamp (openfl_ColorOffsetv + (color * colorMultiplier), 0.0, 1.0);
 			if (color.a > 0.0) {
-				gl_FragColor = vec4 (color.rgb * color.a * openfl_Alphav, color.a * openfl_Alphav);
+				gl_FragColor = vec4(color.rgb * color.a * openfl_Alphav, color.a * openfl_Alphav);
 			} else {
-				gl_FragColor = vec4 (0.0, 0.0, 0.0, 0.0);
+				gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
 			}
 		} else {
 			gl_FragColor = color * openfl_Alphav;
