@@ -2908,7 +2908,7 @@ class FunkinLua {
 		
 		for (folder in foldersToCheck)
 		{
-			if(FileSystem.exists((SUtil.getStorageDirectory() + folder))
+			if(FileSystem.exists(SUtil.getStorageDirectory() + folder))
 			{
 				var frag:String = folder + name + '.frag';
 				var vert:String = folder + name + '.vert';
@@ -2922,7 +2922,7 @@ class FunkinLua {
 
 				if(FileSystem.exists(SUtil.getStorageDirectory() + vert))
 				{
-					vert = File.getContent((SUtil.getStorageDirectory() + vert);
+					vert = File.getContent(SUtil.getStorageDirectory() + vert);
 					found = true;
 				}
 				else vert = null;
